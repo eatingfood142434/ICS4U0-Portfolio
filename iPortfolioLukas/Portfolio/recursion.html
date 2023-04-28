@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Recursion </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Lukas Li</a></h1>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Back to Portfolio</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 style="font-weight: bold">Recursion - CTRL F {link to page about sorting later}</h2>
+          <ol>
+            <li><a href="../index.html">Portfolio</a></li>
+            <li>Recursion</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Recursion Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="col-lg-12">
+          <h2>Recursion</h2>
+          <p>
+            Recursion is a programming technique in which a function calls itself. This allows for large, complicated problems to be simplified 
+            into smaller, more solvable problems. Shown below is an example program which accepts an integer n and runs the factorial function 
+            (multiplies all whole numbers from n down to 1).
+            <div class="codesnippet">
+              <pre><code>public class FactorialDemo {
+    public static void main(String[] args) {
+        System.out.println(factorial(5)); // prints 120 (5*4*3*2*1 = 120)
+    }
+    public static int factorial(int n) {
+        if (n > 1) return n * factorial(n - 1);
+        else return 1;
+    }
+} </code></pre>
+            </div>
+          </p>
+          <p>
+            This program works by multiplying n by factorial(n-1) when n > 1 and returning 1 otherwise. When broken down, <code>factorial(5)</code> 
+            essentially follows these steps.
+            <div class="codesnippet">
+                <pre><code>5 * factorial(4)
+5 * 4 * factorial(3)
+5 * 4 * 3 * factorial(2)
+5 * 4 * 3 * 2 * factorial(1)
+5 * 4 * 3 * 2 * 1 // factorial(1) returns 1, function does not call itself anymore when n &lt;= 1</code></pre>
+              </div><br>
+          </p>
+          <h2>Advantages and Disadvantages of Recursion</h2><br>
+          <h4>Advantages</h4>
+          <p>
+            As stated before, recursion is useful for simplifying large tasks into smaller, more managable subtasks. It is also useful when the output  
+            from a function is needed to be stored or manipulated before being inserted into the same function again (e.g. a recursive function which 
+            calculates the fibonacci sequence would need to take the 2 previous fibonacci numbers and add them together to get the third, then repeat 
+            this over and over again). These abilities also makes recursion very useful for things such as sorting algorithms {link to page about sorting later} and graph traversal.
+          </p><br>
+          <h4>Disadvantages</h4>
+          <p>
+            Though recursive functions are simpler and more compact that non-recursive functions, recursive functions are also generally slower than non-recursive 
+            functions, and also may require more memory. This is because in a recursive function, all function calls must be stored in a stack to 
+            allow the recursive functions to return back to the caller functions. This action of storing the function calls in a stack both decreases 
+            performance, and also can use much more memory depending on how many levels of recursion are used. 
+          </p>
+          <img src="../assets/img/portfolio/Recursion_vs_Iteration.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </section><!-- End Recursion Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
