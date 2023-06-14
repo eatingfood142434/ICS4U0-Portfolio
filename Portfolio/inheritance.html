@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Searching and Sorting</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Lukas Li</a></h1>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Back to Portfolio</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 style="font-weight: bold">Inheritance and Polymorphism</h2>
+          <ol>
+            <li><a href="../index.html">Portfolio</a></li>
+            <li>Inheritance and Polymorphism<</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Inheritance and Polymorphism< Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="col-lg-12">
+          <h2>Inheritance and Polymorphism</h2>
+          <h3>Inheritance</h3>
+          <p>
+            Inheritance is a unique trait of classes. Just like a child inherits genes from their parents, a <b>subclass</b> (child class) inherits attributes and methods 
+            from a <b>superclass</b> (parent class). However, each subclass can only have a single superclass, though a superclass can have multiple subclasses. The relationship 
+            between a subclass and a superclass is known as an <b>IS-A</b> relationship, while the relationship between a class and its attributes is known as a <b>HAS-A</b> 
+            relationship. For example, if the class Honda is a subclass of the class Car, you could say that <b>Honda IS-A Car</b>. If Honda contains the attribute hondaLogo, 
+            you could say thet <b>Honda HAS-A hondaLogo</b>.
+          </p>
+          <h4>Declaring Child Classes</h4>
+          <p>
+            A child class is declared using the <code>extends</code> keyword. For example, take a look at the code shown below.
+          </p>
+          <div class="codesnippet">
+            <pre><code>// In a file called Car.java
+public class Car {
+  String colour;
+  int year;
+  int gas;
+  int mileage;
+  public Car(String c, int y, int g, int m) {
+    colour = c;
+    year = y;
+    gas = g;
+    mileage = m;
+  }
+  // Other Car methods
+}
+
+// In a file called Honda.java
+public class Honda extends Car {
+  String model;
+  public Honda(String c, int y, int g, int m, String mod) {
+    super(c, y, g, m);
+    model = mod;
+  }
+  // Other Honda methods
+}</code></pre>
+          </div>
+          <p><br>
+            In this case, the class <code>Honda</code> is a subclass of the superclass <code>Car</code>. As a result, <code>Honda</code> can 
+            inherit the methods of <code>Car</code>. The attributes of <code>Car</code> can also be inherited by <code>Honda</code> with the 
+            <code>super</code> keyword, which calls the constructor of the <code>Car</code> class.
+          </p>
+          <h4>Access Modifiers</h4>
+          <p>
+            Access Modifiers can be used to specify where a class or method can be accessed from. The <b>public</b> modifier allows an attribute or method 
+            to be accessed globally, while the <b>protected</b> modifier only allows an attribute or method to be accessed from inside the class or its subclasses.
+            If a modifier is not specified, java will default to the <b>default</b> modifier, which allows a method or attribute to be accessed from inside the 
+            class and subclasses in the same package. Finally, the <b>private</b> modifier only allows a method or attribute to be accessed from inside a class. 
+            Private methods are not inherited, and unless specific methods exist to get and set the values of private attributes, they cannot be accessed by a 
+            subclass.
+          </p>
+          <img src="../assets/img/portfolio/AccessModifiers.jpg" class="centered" alt="">
+          <h3>Polymorphism</h3>
+          <p>
+            Polymorphism - meaning many forms - allows for the same method to result in different actions depending on the type of object it is called from.
+          <h4>Overriding</h4>
+          <p>
+            Overriding is a type of polymorphism, and happens when a class and its subclass have a method with the same signature, but different functions. In this 
+            case, the <code>printType()</code> method that is executed depends on the type of the object. If the object has the same type as the superclass, the superclass method will be 
+            executed, but if the object has the same type as the subclass, the subclass method will be executed instead.
+          </p>
+          <div class="codesnippet">
+            <pre><code>// In a file called Car.java
+public class Car {
+  public Car() {
+      
+  }
+  
+  public void printType() {
+    System.out.println("I am a car");
+  }
+}
+
+// In a file called Honda.java
+public class Honda extends Car {
+  public Honda() {
+      
+  }
+  
+  public void printType() {
+      System.out.println("I am a honda");
+  }
+}
+
+// In a file called Driver.java
+public class Driver {
+  public static void main(String[] args) {
+    Car car1 = new Car();
+    Honda car2 = new Honda();
+    car1.printType(); // I am a car
+    car2.printType(); // I am a honda
+  }
+}</code></pre>
+          </div>
+          <p><br>
+            Since <code>car1</code> is of type <code>Car</code>, <code>car1.printType();</code> will call the <code>printType()</code> method of <code>Car</code>. However, 
+            even though Honda is a subclass of Car, Honda has overridden the <code>printType()</code> method of Car with its own <code>printType()</code> method, and so 
+            <code>car2.printType()</code> will call the <code>printType()</code> method of Honda since <code>car2</code> is of type <code>Honda</code>.
+          </p>
+        </div>
+      </div>
+    </section><!-- End Inheritance and Polymorphism< Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
